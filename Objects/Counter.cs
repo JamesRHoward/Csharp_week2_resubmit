@@ -31,5 +31,21 @@ namespace CountWord
     {
       _inputtedSentence = inputtedSentence;
     }
+    public int RepeateCount()
+    {
+      int wordCount = 0;
+      string sentence = _inputtedSentence.StringToLower();
+      string word = _inputtedWord.StringToLower();
+      string[] punctuation = new[] {" ", ",", "!", ".", "?"};
+      string[] wordsToCount = sentence.Split(punctuation, StringSplitOptions.RemoveEmptyEntries);
+      foreach (string inputtedWord in inputtedSentence)
+      {
+        if (inputtedWord == word)
+        {
+          wordCount ++;
+        }
+      }
+      return WordCount;
+    }
   }
 }
