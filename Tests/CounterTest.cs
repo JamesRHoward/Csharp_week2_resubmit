@@ -37,14 +37,24 @@ namespace CountWord
       Assert.Equal(expectedResult, result);
     }
     [Fact]
-    public void Test_CounterString_Multiple()
+    public void Test_CounterString_0()
     {
-      int expectedResult = 3;
-      WordCount testWordCount = new WordCount("dog dog dog", "dog");
+      int expectedResult = 0;
+      WordCount testWordCount = new WordCount("my cat is the best cat", "dog");
 
       int result = testWordCount.RepeateCount();
 
       Assert.Equal(expectedResult, result);
+      }
+      [Fact]
+      public void Test_CounterString_TwoDog()
+      {
+        int expectedResult = 2;
+        WordCount testWordCount = new WordCount("dog dog", "dog");
+
+        int result = testWordCount.RepeateCount();
+
+        Assert.Equal(expectedResult, result);
     }
   }
 }
