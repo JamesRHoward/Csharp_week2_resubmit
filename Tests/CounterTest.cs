@@ -40,22 +40,22 @@ namespace CountWord
     public void Test_CounterString_0()
     {
       int expectedResult = 0;
-      RepeatCounter testRepeateCounter = new RepeatCounter("my cat is the best cat", "dog");
+      RepeatCounter testRepeateCounter = new RepeatCounter("my dog is the best dog", "cat");
 
       int result = testRepeateCounter.CountRepeats();
 
       Assert.Equal(expectedResult, result);
-      }
-    //   [Fact]
-    //   public void Test_CounterString_TwoDog()
-    //   {
-    //     int expectedResult = 2;
-    //     RepeatCounter testRepeateCounter = new RepeatCounter("dog dog", "dog");
-    //
-    //     int result = testRepeateCounter.CountRepeats();
-    //
-    //     Assert.Equal(expectedResult, result);
-    // }
+    }
+    [Fact]
+    public void Test_CounterStringSentence_1()
+    {
+      int expectedResult = 1;
+      RepeatCounter testRepeateCounter = new RepeatCounter("dog play fetch", "dog");
+
+      int result = testRepeateCounter.CountRepeats();
+
+      Assert.Equal(expectedResult, result);
+    }
     [Fact]
     public void Test_CounterString_2()
     {

@@ -34,11 +34,11 @@ namespace CountWord
     public int CountRepeats()
     {
       int inputtedWordCount = 0;
-      string sentence = _inputtedSentence.ToLower();
+      string inputtedSentence = _inputtedSentence.ToLower();
       string wordToCount = _inputtedWord.ToLower().Trim();
       Console.WriteLine(wordToCount);
       string[] punctuation = new [] {" ", ",", "!", ".", "?", ""};
-      string[] wordsToCount = sentence.Split(punctuation, StringSplitOptions.RemoveEmptyEntries);
+      string[] wordsToCount = inputtedSentence.Split(punctuation, StringSplitOptions.RemoveEmptyEntries);
       foreach (string countedWord in wordsToCount)
       {
         if (countedWord == wordToCount)
