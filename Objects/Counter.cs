@@ -1,7 +1,7 @@
 using System;
 using Nancy;
 using System.Collections.Generic;
-using Xunit;
+
 
 namespace CountWord
 {
@@ -43,11 +43,11 @@ namespace CountWord
       string wordToCount = _inputtedWord.ToLower().Trim();
       string[] punctuation = new[] {" ", ",", "!", ".", "?"};
       string[] wordsToCount = sentence.Split(punctuation, StringSplitOptions.RemoveEmptyEntries);
-      foreach (string countedWord in wordToCount)
+      foreach (string countedWord in wordsToCount)
       {
         if (countedWord == wordToCount)
         {
-          inputtedWordCount ++;
+           inputtedWordCount ++;
         }
       }
       return inputtedWordCount;
