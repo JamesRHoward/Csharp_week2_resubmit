@@ -36,7 +36,6 @@ namespace CountWord
       int inputtedWordCount = 0;
       string inputtedSentence = _inputtedSentence.ToLower();
       string wordToCount = _inputtedWord.ToLower().Trim();
-      Console.WriteLine(wordToCount);
       string[] punctuation = new [] {" ", ",", "!", ".", "?", ""};
       string[] wordsToCount = inputtedSentence.Split(punctuation, StringSplitOptions.RemoveEmptyEntries);
       foreach (string countedWord in wordsToCount)
@@ -44,7 +43,6 @@ namespace CountWord
         if (countedWord == wordToCount)
         {
            inputtedWordCount ++;
-           Console.WriteLine(inputtedWordCount);
         }
       }
       return inputtedWordCount;
