@@ -14,7 +14,17 @@ namespace CountWord
 
       int result = testWordCount.RepeateCount();
 
-      AssertE.Equal(expectedResult, result)
+      Assert.Equal(expectedResult, result);
+    }
+    [Fact]
+    public void Test_CounterString_DogTo_dog()
+    {
+      int expectedResult = 1;
+      WordCount testWordCount = new WordCount("Dog", "dog");
+
+      int result = testWordCount.RepeateCount();
+
+      Assert.Equal(expectedResult, result);
     }
   }
 }
