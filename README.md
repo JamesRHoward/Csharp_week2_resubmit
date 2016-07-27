@@ -10,29 +10,13 @@ _This application allows the user to see how many times a word appears in a sent
 
 ## Behavior Driven Development/Specs
 
-#### _User inputs sentence into input field labeled "sentence"_
-* _Example Input: The dogs love to play fetch_
-* _Example Output: The dogs love to play fetch_
+#### _An input word that is an exact match of the input phrase will return an output of 1_
 
-#### _User inputs a single word into input field labeled "word to see how many times it occurs"_
-* _Example Input: dogs_
-* _Example Output: the word dogs occurs 1 time._
+#### _An input word that is an lowercase match of the input phrase will return an output of 1_
 
-#### _User inputs sentence into input field labeled "sentence"_
-* _Example Input: The cats love to play with lazer_
-* _Example Output: The cats love to play fetch_
+#### _An input word that is an uppercase match of the input phrase will return an output of 1_
 
-#### _User inputs a single word into input field labeled "word to see how many times it occurs"_
-* _Example Input: dogs_
-* _Example Output: the word dogs occurs 0 time._
-
-#### _User inputs sentence into input field labeled "sentence"_
-* _Example Input: The dogs! love to play fetch_
-* _Example Output: The dogs! love to play fetch_
-
-#### _User inputs a single word into input field labeled "word to see how many times it occurs"_
-* _Example Input: dogs_
-* _Example Output: the word dogs occurs 1 time._
+#### _An input word that has punctuation and match of the input phrase will return an output of 1_
 
 ## Setup/Installation Requirements
 
