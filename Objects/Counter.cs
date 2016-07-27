@@ -17,32 +17,34 @@ namespace CountWord
     }
     public string GetInputtedWord()
     {
-      return _inputtedSentence;
+      return _inputtedWord;
     }
     public string GetInputtedSentence()
     {
       return _inputtedSentence;
     }
-    public void SetInputtedWord(string inputtedWord)
+    public void SetInputtedWord(string newInputtedWord)
     {
-      _inputtedWord = inputtedWord;
+      _inputtedWord = newInputtedWord;
     }
-    public void SetInputtedSentence(string inputtedSentence)
+    public void SetInputtedSentence(string newInputtedSentence)
     {
-      _inputtedSentence = inputtedSentence;
+      _inputtedSentence = newInputtedSentence;
     }
     public int CountRepeats()
     {
       int inputtedWordCount = 0;
       string sentence = _inputtedSentence.ToLower();
       string wordToCount = _inputtedWord.ToLower().Trim();
-      string[] punctuation = new[] {" ", ",", "!", ".", "?", ""};
+      Console.WriteLine(wordToCount);
+      string[] punctuation = new [] {" ", ",", "!", ".", "?", ""};
       string[] wordsToCount = sentence.Split(punctuation, StringSplitOptions.RemoveEmptyEntries);
       foreach (string countedWord in wordsToCount)
       {
         if (countedWord == wordToCount)
         {
-           inputtedWordCount +=1;
+           inputtedWordCount ++;
+           Console.WriteLine(inputtedWordCount);
         }
       }
       return inputtedWordCount;

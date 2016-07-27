@@ -30,7 +30,7 @@ namespace CountWord
     public void Test_CounterString_PunctuationCharArr()
     {
       int expectedResult = 1;
-      RepeatCounter testRepeateCounter = new RepeatCounter(" dog", "dog");
+      RepeatCounter testRepeateCounter = new RepeatCounter(" dog ", "dog");
 
       int result = testRepeateCounter.CountRepeats();
 
@@ -46,15 +46,25 @@ namespace CountWord
 
       Assert.Equal(expectedResult, result);
       }
-      [Fact]
-      public void Test_CounterString_TwoDog()
-      {
-        int expectedResult = 2;
-        RepeatCounter testRepeateCounter = new RepeatCounter("dog dog", "dog");
+    //   [Fact]
+    //   public void Test_CounterString_TwoDog()
+    //   {
+    //     int expectedResult = 2;
+    //     RepeatCounter testRepeateCounter = new RepeatCounter("dog dog", "dog");
+    //
+    //     int result = testRepeateCounter.CountRepeats();
+    //
+    //     Assert.Equal(expectedResult, result);
+    // }
+    [Fact]
+    public void Test_CounterString_2()
+    {
+      int expectedResult = 2;
+      RepeatCounter testRepeateCounter = new RepeatCounter("my dog is an awesome dog", "dog");
 
-        int result = testRepeateCounter.CountRepeats();
+      int result = testRepeateCounter.CountRepeats();
 
-        Assert.Equal(expectedResult, result);
+      Assert.Equal(expectedResult, result);
     }
   }
 }
