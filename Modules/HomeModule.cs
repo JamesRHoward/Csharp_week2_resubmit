@@ -12,9 +12,9 @@ namespace CountWord
         return View["index.cshtml"];
       };
       Post["/result"] = _ => {
-        RepeatCounter newCount = new RepeatCounter();
-        var NumberOfWords = newCount.CountRepeats(Request.Form["sentence"],Request.Form["word"]);
-        return View["results.cshtml", NumberOfWords];
+        RepeatCounter newRepeateCounter = new RepeatCounter(Request.Form["sentence"],Request.Form["word"]);
+        return View["results.cshtml", newRepeateCounter];
       };
     }
   }
+}
