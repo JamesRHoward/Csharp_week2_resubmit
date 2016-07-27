@@ -9,10 +9,12 @@ namespace CountWord
     [Fact]
     public void Test_CounterString()
     {
-      WordCount testWordCount = new WordCount();
-      testWordCount.SetInputtedWord("dog");
-      testWordCount.SetInputtedSentence("The dog loves food");
-      Assert.Equal(1, testWordCount.RepeateCount());
+      int expectedResult = 1;
+      WordCount testWordCount = new WordCount("dog", "dog");
+
+      int result = testWordCount.RepeateCount();
+
+      AssertE.Equal(expectedResult, result)
     }
   }
 }
