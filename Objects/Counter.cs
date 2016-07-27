@@ -5,12 +5,12 @@ using System.Collections.Generic;
 
 namespace CountWord
 {
-  public class WordCount
+  public class RepeatCounter
   {
     private string _inputtedWord;
     private string _inputtedSentence;
 
-    public WordCount(string inputtedWord, string inputtedSentence)
+    public RepeatCounter(string inputtedWord, string inputtedSentence)
     {
       _inputtedWord = inputtedWord;
       _inputtedSentence = inputtedSentence;
@@ -31,7 +31,7 @@ namespace CountWord
     {
       _inputtedSentence = inputtedSentence;
     }
-    public int RepeateCount()
+    public int CountRepeats()
     {
       int inputtedWordCount = 0;
       string sentence = _inputtedSentence.ToLower();

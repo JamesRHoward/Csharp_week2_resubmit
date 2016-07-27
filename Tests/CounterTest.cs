@@ -4,15 +4,15 @@ using Xunit;
 
 namespace CountWord
 {
-  public class CountWordTest
+  public class RepeateCounterTest
   {
     [Fact]
     public void Test_CounterString()
     {
       int expectedResult = 1;
-      WordCount testWordCount = new WordCount("dog", "dog");
+      RepeatCounter testRepeateCounter = new RepeatCounter("dog", "dog");
 
-      int result = testWordCount.RepeateCount();
+      int result = testRepeateCounter.CountRepeats();
 
       Assert.Equal(expectedResult, result);
     }
@@ -20,9 +20,9 @@ namespace CountWord
     public void Test_CounterString_DogTo_dog()
     {
       int expectedResult = 1;
-      WordCount testWordCount = new WordCount("Dog", "dog");
+      RepeatCounter testRepeateCounter = new RepeatCounter("Dog", "dog");
 
-      int result = testWordCount.RepeateCount();
+      int result = testRepeateCounter.CountRepeats();
 
       Assert.Equal(expectedResult, result);
     }
@@ -30,9 +30,9 @@ namespace CountWord
     public void Test_CounterString_PunctuationCharArr()
     {
       int expectedResult = 1;
-      WordCount testWordCount = new WordCount(" dog", "dog");
+      RepeatCounter testRepeateCounter = new RepeatCounter(" dog", "dog");
 
-      int result = testWordCount.RepeateCount();
+      int result = testRepeateCounter.CountRepeats();
 
       Assert.Equal(expectedResult, result);
     }
@@ -40,9 +40,9 @@ namespace CountWord
     public void Test_CounterString_0()
     {
       int expectedResult = 0;
-      WordCount testWordCount = new WordCount("my cat is the best cat", "dog");
+      RepeatCounter testRepeateCounter = new RepeatCounter("my cat is the best cat", "dog");
 
-      int result = testWordCount.RepeateCount();
+      int result = testRepeateCounter.CountRepeats();
 
       Assert.Equal(expectedResult, result);
       }
@@ -50,9 +50,9 @@ namespace CountWord
       public void Test_CounterString_TwoDog()
       {
         int expectedResult = 2;
-        WordCount testWordCount = new WordCount("dog dog", "dog");
+        RepeatCounter testRepeateCounter = new RepeatCounter("dog dog", "dog");
 
-        int result = testWordCount.RepeateCount();
+        int result = testRepeateCounter.CountRepeats();
 
         Assert.Equal(expectedResult, result);
     }
