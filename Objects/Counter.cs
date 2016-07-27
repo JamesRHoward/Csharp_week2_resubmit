@@ -9,7 +9,7 @@ namespace CountWord
   {
     private string _inputtedWord;
     private string _inputtedSentence;
-
+    private int inputtedWordCount = 0;
     public RepeatCounter(string inputtedWord, string inputtedSentence)
     {
       _inputtedWord = inputtedWord;
@@ -33,7 +33,7 @@ namespace CountWord
     }
     public int CountRepeats()
     {
-      int inputtedWordCount = 0;
+
       string inputtedSentence = _inputtedSentence.ToLower();
       string wordToCount = _inputtedWord.ToLower().Trim();
       string[] punctuation = new [] {" ", ",", "!", ".", "?", ""};
@@ -42,7 +42,8 @@ namespace CountWord
       {
         if (countedWord == wordToCount)
         {
-           inputtedWordCount ++;
+           inputtedWordCount +=1;
+           Console.WriteLine(inputtedWordCount);
         }
       }
       return inputtedWordCount;
